@@ -16,6 +16,7 @@ const Header = () => {
                 {showMenu ? <>
                     <HeaderLink to="/" text="Home" />
                     <HeaderLink to="/about" text="About Me" />
+                    <HeaderLink to="/skills" text="Skills" />
                     <Close onClick={closeMenu}/>
                 </> : <Open onClick={openMenu} />}
                 </MenuContainer>

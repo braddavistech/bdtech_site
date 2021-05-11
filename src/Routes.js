@@ -4,6 +4,7 @@ import { Switch, Route, Redirect, useLocation } from 'react-router-dom'
 import Main from './Main'
 import Home from './pages/Home'
 import About from './pages/About'
+import Skills from './pages/Skills'
 import BackgroundImage from './components/atoms/BackgroundImage'
 
 const Routes = () => {
@@ -12,6 +13,7 @@ const Routes = () => {
             <BackgroundImage />
             <AppBody>
                 <Switch>
+                <Route exact path="/skills" component={Skills} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/" component={Home} />
                     <Redirect path="*" to="/" />
