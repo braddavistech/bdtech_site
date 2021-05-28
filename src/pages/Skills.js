@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import styled from 'styled-components'
 import skills from '../constants/skills'
 import HeaderText from '../components/atoms/HeaderText'
-import profileImage from '../images/profilePicBlackBkgrnd.jpeg'
+import Stars from '../components/atoms/Stars'
 
-const mySkills = [
-    {
-        name: 'Node.js'
-    }
-]
 
 const Skills = () => {
     const [currentSkill, setCurrentSkill] = useState(undefined)
+    const [sortedSkills, setSortedSkills] = useState([])
+
+    useEffect(() => {
+        setSortedSkills(skills.sort((a,b) => b.stars - a.stars))
+    }, [])
+
 
     const showSkills = () =>
-        skills.map(skill => (
+        sortedSkills.map(skill => (
             <SkillCard
                 key={skill.name}
                 onMouseEnter={() => setCurrentSkill(skill)}
@@ -37,6 +38,7 @@ const Skills = () => {
                 {currentSkill && (
                     <SkillCard>
                         <SkillName>{currentSkill.name}</SkillName>
+                        <Stars stars={currentSkill.stars} />
                     </SkillCard>
                 )}
             </header>
