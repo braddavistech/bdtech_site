@@ -7,7 +7,7 @@ import { MdMenu, MdClose } from 'react-icons/md'
 const Footer = () => {
     return (
         <Container >
-            <Text>Custom React site built with Node and deployed with Serverless Framework.</Text>
+            <Text>Custom React site built with Node and deployed with AWS.</Text>
             </Container>
     )
 }
