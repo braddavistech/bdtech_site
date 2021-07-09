@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react'
 import styled from 'styled-components'
-import { Switch, Route, Redirect, useLocation } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import Main from './Main'
 import Home from './pages/Home'
 import About from './pages/About'
 import Skills from './pages/Skills'
-import Resume from './pages/Resume'
 import BackgroundImage from './components/atoms/BackgroundImage'
 
 const Routes = () => {
@@ -16,7 +15,6 @@ const Routes = () => {
         <Switch>
           <Route exact path="/skills" component={Skills} />
           <Route exact path="/about" component={About} />
-          <Route exact path="/resume" component={Resume} />
           <Route exact path="/" component={Home} />
           <Redirect path="*" to="/" />
         </Switch>
