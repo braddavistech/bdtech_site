@@ -15,8 +15,6 @@ const ButtonDiv = styled.div`
 `
 
 const StyledButton= styled.a`
-    color: black;
-    background-color: black;
     color: white;
     font-weight: bolder;
     margin: 0 10px;
