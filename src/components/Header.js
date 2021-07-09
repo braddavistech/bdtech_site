@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import HeaderLink from './atoms/HeaderLink'
+import HeaderA from './atoms/HeaderA'
 import styled from 'styled-components'
 import { MdMenu, MdClose } from 'react-icons/md'
+import Resume from '../images/Brad_Davis_Resume_2021.pdf'
 
 
 const Header = () => {
@@ -17,6 +19,7 @@ const Header = () => {
                     <HeaderLink to="/" text="Home" />
                     <HeaderLink to="/about" text="About Me" />
                     <HeaderLink to="/skills" text="Skills" />
+                    <HeaderA href={Resume} target="_blank" text="Resume" />
                     <Close onClick={closeMenu}/>
                 </> : <Open onClick={openMenu} />}
                 </MenuContainer>
