@@ -2,7 +2,6 @@ import '../App.css'
 import styled from 'styled-components'
 import HeaderText from '../components/atoms/HeaderText'
 import SubheaderText from '../components/atoms/SubheaderText'
-import logo from '../images/BDTechLogo.jpeg'
 
 const Home = () => {
     return (

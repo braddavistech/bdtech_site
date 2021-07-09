@@ -1,7 +1,7 @@
 import '../App.css'
 import styled from 'styled-components'
 import HeaderText from '../components/atoms/HeaderText'
-import profileImage from '../images/profilePicBlackBkgrnd.jpeg'
+import profileImage from '../images/ProfilePic.png'
 import Resume from '../images/Brad_Davis_Resume_2021.pdf'
 import DownloadButton from '../components/atoms/DownloadButton'
 
@@ -22,7 +22,6 @@ const About = () => {
 const Image = styled.img`
     height: 200px;
     margin-bottom: 20px;
-    border-radius: 20px;
 `
 
 
